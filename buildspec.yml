@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        php: 7.3
+        php: 7.2
   pre_build:
     commands:
       - echo Build started on `date`
@@ -11,7 +11,7 @@ phases:
    commands:
      - composer --version
      - echo Installing composer deps
-     - composer install -d .
+     - composer install --ignore-platform-reqs
   post_build:
     commands:
       - echo Build completed on `date`
