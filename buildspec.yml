@@ -3,15 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        nodejs: 10
         php: 7.3
   pre_build:
     commands:
       - echo Build started on `date`
   build:
    commands:
+     - composer --version
      - echo Installing composer deps
-     - composer install
+     - composer install -d .
   post_build:
     commands:
       - echo Build completed on `date`
