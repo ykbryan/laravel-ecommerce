@@ -13,3 +13,4 @@ yarn.lock
 .env
 .env.*
 *.zip
+.DS_Store
