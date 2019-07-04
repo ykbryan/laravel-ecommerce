@@ -4,6 +4,7 @@ phases:
   install:
     runtime-versions:
         php: 7.3
+        nodejs: 10
   pre_build:
     commands:
       - echo Build started on `date`
@@ -12,6 +13,9 @@ phases:
      - composer --version
      - echo Installing composer deps
      - composer install --ignore-platform-reqs
+     - php artisan ecommerce:install
+     - npm install
+     - npm run production
   post_build:
     commands:
       - echo Build completed on `date`
