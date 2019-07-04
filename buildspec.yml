@@ -13,7 +13,7 @@ phases:
      - composer --version
      - echo Installing composer deps
      - composer install --ignore-platform-reqs
-     - php artisan ecommerce:install
+     - php artisan ecommerce:install --force
      - npm install
      - npm run production
   post_build:
